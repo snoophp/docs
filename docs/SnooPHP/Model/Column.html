@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>SnooPHP\Model\Column | SnooPHP API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:SnooPHP_Model_Column" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">SnooPHP API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../SnooPHP.html">SnooPHP</a></li><li class="backslash">\</li><li><a href="../../SnooPHP/Model.html">Model</a></li><li class="backslash">\</li><li>Column</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Column
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Column</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>A column is a field of a table with a type and optional properties</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_name">
+                                        protected                                        string
+                </td>
+                <td>$name</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_type">
+                                        protected                                        string
+                </td>
+                <td>$type</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_properties">
+                                        protected                                        array
+                </td>
+                <td>$properties</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $name, string $type, array $properties = [])
+        
+                                            <p>Create a column</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_name">name</a>()
+        
+                                            <p>Get column name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_type">type</a>()
+        
+                                            <p>Get column type</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_property">property</a>(string $name = null)
+        
+                                            <p>Get column property(ies)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_notNullable">notNullable</a>()
+        
+                                            <p>Set nullable or not nullable</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nullable">nullable</a>()
+        
+                                            <p>Explicity set this column to be nullable</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_size">size</a>(int $value)
+        
+                                            <p>Set data size</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_default">default</a>(mixed $value)
+        
+                                            <p>Set default</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsigned">unsigned</a>()
+        
+                                            <p>Set unsigned</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_autoIncrement">autoIncrement</a>()
+        
+                                            <p>Set auto increment</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onUpdate">onUpdate</a>(mixed $value = &quot;current_timestamp&quot;)
+        
+                                            <p>Set on update property of timestamp</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unique">unique</a>()
+        
+                                            <p>Make unique key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_uniqueComposite">uniqueComposite</a>(bool $closeChain = false)
+        
+                                            <p>Make composite unique key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_primary">primary</a>()
+        
+                                            <p>Make primary key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_primaryComposite">primaryComposite</a>(bool $closeChain = false)
+        
+                                            <p>Make composite primary key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_references">references</a>(string $table, string $column, string|null $onDelete = &quot;no action&quot;, string|null $onUpdate = &quot;no action&quot;)
+        
+                                            <p>Make foreign key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_referencesComposite">referencesComposite</a>(string $column, bool $closeChain = false, string $table = &quot;table&quot;, string|null $onDelete = &quot;no action&quot;, string|null $onUpdate = &quot;no action&quot;)
+        
+                                            <p>Make composite foreign key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_declaration">declaration</a>()
+        
+                                            <p>Return column declaration (no constraints)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_constraintsDeclarations">constraintsDeclarations</a>(<a href="../../SnooPHP/Model/Table.html"><abbr title="SnooPHP\Model\Table">Table</abbr></a> $table)
+        
+                                            <p>Return constraints declarations</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_set">set</a>(string $name, mixed $value = true)
+        
+                                            <p>Set column property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 564</div>
+        <code>                    
+    <strong>__construct</strong>(string $name, string $type, array $properties = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a column</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>column name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>column type</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$properties</td>
+                <td>column properties</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_name">
+        <div class="location">at         line 575</div>
+        <code>                    string
+    <strong>name</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get column name</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_type">
+        <div class="location">at         line 585</div>
+        <code>                    string
+    <strong>type</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get column type</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_property">
+        <div class="location">at         line 598</div>
+        <code>                    array|string|null
+    <strong>property</strong>(string $name = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get column property(ies)</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>if specified return property</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string|null</td>
+            <td>return null if property is not found</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_notNullable">
+        <div class="location">at         line 612</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>notNullable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set nullable or not nullable</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nullable">
+        <div class="location">at         line 624</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>nullable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Explicity set this column to be nullable</p>                    <p>This is require in certain situations, for example with timestamp columns</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_size">
+        <div class="location">at         line 636</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>size</strong>(int $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set data size</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$value</td>
+                <td>column data size</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_default">
+        <div class="location">at         line 648</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>default</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set default</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>default value for column</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsigned">
+        <div class="location">at         line 658</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>unsigned</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set unsigned</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_autoIncrement">
+        <div class="location">at         line 668</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>autoIncrement</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set auto increment</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onUpdate">
+        <div class="location">at         line 680</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>onUpdate</strong>(mixed $value = &quot;current_timestamp&quot;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set on update property of timestamp</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>value to set on table update</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unique">
+        <div class="location">at         line 690</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>unique</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make unique key</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_uniqueComposite">
+        <div class="location">at         line 702</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>uniqueComposite</strong>(bool $closeChain = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make composite unique key</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$closeChain</td>
+                <td>close composite chain</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_primary">
+        <div class="location">at         line 712</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>primary</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make primary key</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_primaryComposite">
+        <div class="location">at         line 724</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>primaryComposite</strong>(bool $closeChain = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make composite primary key</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$closeChain</td>
+                <td>close composite chain</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_references">
+        <div class="location">at         line 739</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>references</strong>(string $table, string $column, string|null $onDelete = &quot;no action&quot;, string|null $onUpdate = &quot;no action&quot;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make foreign key</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>name of foreign table</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td>name of foreign column</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$onDelete</td>
+                <td>on delete option</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$onUpdate</td>
+                <td>on update option</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_referencesComposite">
+        <div class="location">at         line 760</div>
+        <code>                    <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>referencesComposite</strong>(string $column, bool $closeChain = false, string $table = &quot;table&quot;, string|null $onDelete = &quot;no action&quot;, string|null $onUpdate = &quot;no action&quot;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make composite foreign key</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td>name of foreign column</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$closeChain</td>
+                <td>close composite chain</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>name of foreign table</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$onDelete</td>
+                <td>on delete option</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$onUpdate</td>
+                <td>on update option</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_declaration">
+        <div class="location">at         line 776</div>
+        <code>                    string
+    <strong>declaration</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return column declaration (no constraints)</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_constraintsDeclarations">
+        <div class="location">at         line 803</div>
+        <code>                    array
+    <strong>constraintsDeclarations</strong>(<a href="../../SnooPHP/Model/Table.html"><abbr title="SnooPHP\Model\Table">Table</abbr></a> $table)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return constraints declarations</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../SnooPHP/Model/Table.html"><abbr title="SnooPHP\Model\Table">Table</abbr></a></td>
+                <td>$table</td>
+                <td>table of the column</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">at         line 825</div>
+        <code>            protected        <a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a>
+    <strong>set</strong>(string $name, mixed $value = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set column property</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>name of the property</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>value of the property if necessary</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Column.html"><abbr title="SnooPHP\Model\Column">Column</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

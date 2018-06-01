@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>SnooPHP\Model\Collection | SnooPHP API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:SnooPHP_Model_Collection" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">SnooPHP API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../SnooPHP.html">SnooPHP</a></li><li class="backslash">\</li><li><a href="../../SnooPHP/Model.html">Model</a></li><li class="backslash">\</li><li>Collection</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Collection
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Collection</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Wrapper for array of models</p>            <p>Mixed models are allowed, but some methods won't work properly</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_models">
+                                        protected                                        <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>[]
+                </td>
+                <td>$models</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $models)
+        
+                                            <p>Create a new collection from a set of models</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_array">array</a>()
+        
+                                            <p>Return array of models</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_size">size</a>()
+        
+                                            <p>Return number of models</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_num">num</a>()
+        
+                                            <p>Return number of models</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_empty">empty</a>()
+        
+                                            <p>Return true if empty</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>($i = 0)
+        
+                                            <p>Return i-th element (if 0 &lt;= i &lt; size)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_first">first</a>()
+        
+                                            <p>Return first element (if exists)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_last">last</a>()
+        
+                                            <p>Return last element (if exists)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|int|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_find">find</a>(callable|<a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a> $criteria)
+        
+                                            <p>Find an element</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_each">each</a>(callable $iterator)
+        
+                                            <p>Run function on each model instance (can only modify instance property)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_expand">expand</a>(string|array $edges = [], bool $force = false)
+        
+                                            <p>Expands nodes within this collection</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_append">append</a>(<a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a> $collection)
+        
+                                            <p>Append another collection</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         line 24</div>
+        <code>                    
+    <strong>__construct</strong>(array $models)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new collection from a set of models</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$models</td>
+                <td>set of models</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_array">
+        <div class="location">at         line 34</div>
+        <code>                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>[]
+    <strong>array</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return array of models</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_size">
+        <div class="location">at         line 44</div>
+        <code>                    int
+    <strong>size</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return number of models</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_num">
+        <div class="location">at         line 55</div>
+        <code>                    int
+    <strong>num</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return number of models</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <abbr title="SnooPHP\Model\size()">size()</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_empty">
+        <div class="location">at         line 65</div>
+        <code>                    bool
+    <strong>empty</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return true if empty</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at         line 75</div>
+        <code>                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null
+    <strong>get</strong>($i = 0)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return i-th element (if 0 &lt;= i &lt; size)</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$i</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_first">
+        <div class="location">at         line 85</div>
+        <code>                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null
+    <strong>first</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return first element (if exists)</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_last">
+        <div class="location">at         line 95</div>
+        <code>                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null
+    <strong>last</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return last element (if exists)</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_find">
+        <div class="location">at         line 109</div>
+        <code>                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|int|null
+    <strong>find</strong>(callable|<a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a> $criteria)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find an element</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable|<a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a></td>
+                <td>$criteria</td>
+                <td>model to match or callable called on every element (return true if element match the criteria)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|int|null</td>
+            <td>if model is given, return index or null if not found.
+                            If callable given, return matching element or null if none found.
+                            In any case returns only a single result</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_each">
+        <div class="location">at         line 142</div>
+        <code>                    <a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>
+    <strong>each</strong>(callable $iterator)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run function on each model instance (can only modify instance property)</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$iterator</td>
+                <td>function called on every element of the collection.
+                                Return true to repeat on current instance, return false to break.
+                                Note that you should define the parameter as a reference in order to affect it.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a></td>
+            <td>return this collection</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expand">
+        <div class="location">at         line 168</div>
+        <code>                    <a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>
+    <strong>expand</strong>(string|array $edges = [], bool $force = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Expands nodes within this collection</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$edges</td>
+                <td>edges to expand</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$force</td>
+                <td>if true assumes all models are nodes</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a></td>
+            <td>return this collection</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_append">
+        <div class="location">at         line 182</div>
+        <code>                    <a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>
+    <strong>append</strong>(<a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a> $collection)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append another collection</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a></td>
+                <td>$collection</td>
+                <td>collection to append</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a></td>
+            <td>this collection</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

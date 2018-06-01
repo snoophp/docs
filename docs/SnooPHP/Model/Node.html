@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>SnooPHP\Model\Node | SnooPHP API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:SnooPHP_Model_Node" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">SnooPHP API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../SnooPHP.html">SnooPHP</a></li><li class="backslash">\</li><li><a href="../../SnooPHP/Model.html">Model</a></li><li class="backslash">\</li><li>Node</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Node
+                
+        </h1>
+    </div>
+
+    <p>abstract     class
+    <strong>Node</strong>        extends <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>A node ispired by the concept of node in the facebook api graph</p>            <p>Nodes take even further the concept of relationship between models of the application</p>
+
+<p>A node has multiple fields and edges:
+- fields are primitive properties of the underlying model (numbers, strings, ...)
+- edges are connections to other nodes of the graph, usually in the form of ids (integer values)</p>
+
+<p>All requests should have a starting node and a set (possibly empty) of expanded edges:
+<code>GET /user/{login}?edges=relationship|friends|achievements</code></p>
+
+<p>Edges can be nested:</p>
+
+<p><code>GET /user{login}?edges=relationship|friends(relationship|friends|achievements)</code></p>
+
+<p>The Node class exposes a method see expand() which MUST be overriden to expand edges of the current node.</p>
+
+<p>Note that the Node class extends the SnooPHP class, so you can perfom classic database operations.
+It is also compatible with Collection (i.e. collections can be collections of nodes)</p>                    </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>EDGE_CONNECTION_PREFIX</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_idColumn">
+                    static                    protected                                        string
+                </td>
+                <td>$idColumn</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#property_idColumn"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_casts">
+                    static                    protected                                        array
+                </td>
+                <td>$casts</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#property_casts"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_jsons">
+                    static                    protected                                        array
+                </td>
+                <td>$jsons</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#property_jsons"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_autos">
+                    static                    protected                                        array
+                </td>
+                <td>$autos</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#property_autos"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dbName">
+                    static                    protected                                        string
+                </td>
+                <td>$dbName</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#property_dbName"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $values = [])
+        
+                                            <p>Create a new model</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method___construct"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_select">select</a>(string $queryString = &quot;&quot;, array $queryParams = [])
+        
+                                            <p>Run query on this table and return model</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_select"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_find">find</a>(mixed $id, string $idColumn = null)
+        
+                                            <p>Find model and return it</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_find"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_has">has</a>(string $forClass, string $forColumn = null)
+        
+                                            <p>One-to-one relationship</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_has"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hasMany">hasMany</a>(string $forClass, string $forColumn = null, string $condition = &quot;&quot;, array $conditionParams = [])
+        
+                                            <p>One-to-many relationship</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_hasMany"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_belongsTo">belongsTo</a>(string $refClass, string $forColumn = null)
+        
+                                            <p>One-to-one inverse relationship</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_belongsTo"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_save">save</a>(bool|null $update = null)
+        
+                                            <p>Save object to database, updating or inserting a new row</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_save"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_delete">delete</a>()
+        
+                                            <p>Delete this model from table</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_delete"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool|int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteWhere">deleteWhere</a>(string $condition = null, array $conditionParams = [])
+        
+                                            <p>Delete all models that match condition</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_deleteWhere"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_purge">purge</a>()
+        
+                                            <p>Purge this model collection</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_purge"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resetAutoIncrement">resetAutoIncrement</a>()
+        
+                                            <p>Reset auto increment value</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_resetAutoIncrement"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_json">json</a>()
+        
+                                            <p>Return a json representation of the model</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_json"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toString">toString</a>()
+        
+                                            <p>Return a string representation of the model</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_toString"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tableName">tableName</a>()
+        
+                                            <p>Return the table name</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_tableName"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modelName">modelName</a>()
+        
+                                            <p>Return the name of this model</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_modelName"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decodeValue">decodeValue</a>($val, $column)
+        
+                                            <p>Convert value coming from database</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_decodeValue"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeValue">encodeValue</a>(mixed $column)
+        
+                                            <p>Convert column to string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_encodeValue"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string[]|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_tableColumns">tableColumns</a>()
+        
+                                            <p>Return name of table columns</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../SnooPHP/Model/Model.html#method_tableColumns"><abbr title="SnooPHP\Model\Model">Model</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../SnooPHP/Model/Node.html"><abbr title="SnooPHP\Model\Node">Node</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_expand">expand</a>(string|array|null $edges = null)
+        
+                                            <p>Expand edges of this node</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array|string|<abbr title="SnooPHP\Model\false">false</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_parseEdgesString">parseEdgesString</a>(string $edges, bool $json = false)
+        
+                                            <p>Takes a string of edges to expand and returns an array or a json string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method___construct"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 48</div>
+        <code>                    
+    <strong>__construct</strong>(array $values = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new model</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>associative array column => value</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_select">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_select"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 61</div>
+        <code>        static            <a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>|bool
+    <strong>select</strong>(string $queryString = &quot;&quot;, array $queryParams = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Run query on this table and return model</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$queryString</td>
+                <td>query string</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$queryParams</td>
+                <td>query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_find">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_find"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 95</div>
+        <code>        static            <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null|bool
+    <strong>find</strong>(mixed $id, string $idColumn = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Find model and return it</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$id</td>
+                <td>id of the model</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$idColumn</td>
+                <td>optional id column different from default $idColumn</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|null|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_has"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 130</div>
+        <code>                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|bool
+    <strong>has</strong>(string $forClass, string $forColumn = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>One-to-one relationship</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$forClass</td>
+                <td>foreign model class name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$forColumn</td>
+                <td>foreign column if it differs from className_id (ex. user_id)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasMany">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_hasMany"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 169</div>
+        <code>                    <a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>|null
+    <strong>hasMany</strong>(string $forClass, string $forColumn = null, string $condition = &quot;&quot;, array $conditionParams = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>One-to-many relationship</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$forClass</td>
+                <td>foreign model class name</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$forColumn</td>
+                <td>foreign column if it differs from className_id (ex. user_id)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$condition</td>
+                <td>condition to append (AND) to the query (use R and F as Reference and Foreign tables)</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$conditionParams</td>
+                <td>parameters to bind to the condition query</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Collection.html"><abbr title="SnooPHP\Model\Collection">Collection</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_belongsTo">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_belongsTo"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 207</div>
+        <code>                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>
+    <strong>belongsTo</strong>(string $refClass, string $forColumn = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>One-to-one inverse relationship</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$refClass</td>
+                <td>reference model class</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$forColumn</td>
+                <td>foreign key if different from refTable_id</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_save">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_save"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 243</div>
+        <code>                    <a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a>
+    <strong>save</strong>(bool|null $update = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Save object to database, updating or inserting a new row</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|null</td>
+                <td>$update</td>
+                <td>if true update model, otherwise insert (null, decide based on id column)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Model.html"><abbr title="SnooPHP\Model\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_delete"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 316</div>
+        <code>                    bool
+    <strong>delete</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete this model from table</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteWhere">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_deleteWhere"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 343</div>
+        <code>        static            bool|int
+    <strong>deleteWhere</strong>(string $condition = null, array $conditionParams = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete all models that match condition</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$condition</td>
+                <td>if not specified purge() is called</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$conditionParams</td>
+                <td>condition parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_purge">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_purge"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 364</div>
+        <code>        static            bool
+    <strong>purge</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Purge this model collection</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resetAutoIncrement">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_resetAutoIncrement"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 381</div>
+        <code>        static            bool
+    <strong>resetAutoIncrement</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reset auto increment value</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_json">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_json"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 392</div>
+        <code>                    string
+    <strong>json</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a json representation of the model</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toString">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_toString"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 402</div>
+        <code>                    string
+    <strong>toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a string representation of the model</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tableName">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_tableName"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 417</div>
+        <code>        static            string
+    <strong>tableName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the table name</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modelName">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_modelName"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 433</div>
+        <code>        static    protected        string
+    <strong>modelName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the name of this model</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decodeValue">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_decodeValue"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 445</div>
+        <code>            protected        mixed
+    <strong>decodeValue</strong>($val, $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert value coming from database</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$val</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeValue">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_encodeValue"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 459</div>
+        <code>            protected        string
+    <strong>encodeValue</strong>(mixed $column)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert column to string</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$column</td>
+                <td>name of the column</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tableColumns">
+        <div class="location">in <a href="../../SnooPHP/Model/Model.html#method_tableColumns"><abbr title="SnooPHP\Model\Model">Model</abbr></a> at         line 473</div>
+        <code>        static    protected        string[]|null
+    <strong>tableColumns</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return name of table columns</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string[]|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expand">
+        <div class="location">at         line 40</div>
+        <code>                    <a href="../../SnooPHP/Model/Node.html"><abbr title="SnooPHP\Model\Node">Node</abbr></a>
+    <strong>expand</strong>(string|array|null $edges = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Expand edges of this node</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|null</td>
+                <td>$edges</td>
+                <td>set (or string) of nodes to expand or null to expand all (use it carefully)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../SnooPHP/Model/Node.html"><abbr title="SnooPHP\Model\Node">Node</abbr></a></td>
+            <td>expanded node</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseEdgesString">
+        <div class="location">at         line 79</div>
+        <code>        static            array|string|<abbr title="SnooPHP\Model\false">false</abbr>
+    <strong>parseEdgesString</strong>(string $edges, bool $json = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Takes a string of edges to expand and returns an array or a json string</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$edges</td>
+                <td>string of edges</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$json</td>
+                <td>if true return json string instead of array</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string|<abbr title="SnooPHP\Model\false">false</abbr></td>
+            <td>false if fails</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
